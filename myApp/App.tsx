@@ -1,32 +1,23 @@
-import React from 'react';
-import {View} from 'react-native';
+import React from 'react'
+import { View, Text, SafeAreaView, ScrollView } from 'react-native'
+import Flatcard from './component/Flatcard'
+import ElevatedCard from './component/ElevatedCard'
+import FancyCard from './component/FancyCard'
+import Actioncard from './component/Actioncard'
+import ContactList from './component/ContactList'
 
-const FixedDimensionsBasics = () => {
+const App = () => {
   return (
-    <View>
-      <View
-        style={{
-          width: 50,
-          height: 50,
-          backgroundColor: 'powderblue',
-        }}
-      />
-      <View
-        style={{
-          width: 100,
-          height: 100,
-          backgroundColor: 'skyblue',
-        }}
-      />
-      <View
-        style={{
-          width: 170,
-          height: 150,
-          backgroundColor: 'steelblue',
-        }}
-      />
-    </View>
-  );
-};
+    <SafeAreaView>
+    <ScrollView>
+      <Flatcard/>
+      <ElevatedCard />
+      <FancyCard />
+      <Actioncard />
+      <ContactList/>
+    </ScrollView>
+    </SafeAreaView>
+  )
+}
 
-export default FixedDimensionsBasics;
+export default App;
